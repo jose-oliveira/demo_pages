@@ -1,0 +1,22 @@
+demo_pages_ws_posts:
+  path: 'demos/posts'
+  defaults:
+    _controller: '\Drupal\demo_pages\Controller\DemoWSController::posts'
+    _title: 'Show posts from a service'
+  requirements:
+    _permission: 'access content'
+
+demo_pages_ws_post:
+  path: 'demos/posts/{post_id}'
+  defaults:
+    _controller: '\Drupal\demo_pages\Controller\DemoWSController::post'
+  requirements:
+    _permission: 'access content'
+
+demo_pages_config_form:
+  path: 'admin/demos/posts'
+  defaults:
+    _form:  '\Drupal\demo_pages\Form\WSPostConfigForm'
+    _title: 'Configurations for WS posts'
+  requirements:
+    _permission: 'access administration pages'
